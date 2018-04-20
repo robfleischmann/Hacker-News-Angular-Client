@@ -16,9 +16,7 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     // Get our best stories
     this.hackerNews.getBestStories().subscribe(res => {
-      let stories = res.json();
-      console.log("BEST STORIES:");
-      console.log(stories);
+      this.bestStories = res.json();
     });
   }
 
