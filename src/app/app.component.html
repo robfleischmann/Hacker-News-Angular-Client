@@ -1,15 +1,17 @@
 <div>
   <mat-toolbar color="primary">
-    <span>Hacker News Best Stories</span>
+    <mat-toolbar-row>
+      <span>Hacker News Best Stories</span>
+      <mat-icon>search</mat-icon>
+    </mat-toolbar-row>
   </mat-toolbar>
 
   <mat-grid-list cols="3" rowHeight="180px">
     <mat-grid-tile *ngFor="let story of bestStories">
       <mat-card>
         <mat-card-title>{{ story.author }}</mat-card-title>
-        <mat-card-content>{{ story.title }}</mat-card-content>    
+        <mat-card-content>{{ story.title }}</mat-card-content>
       </mat-card>        
     </mat-grid-tile>
-  </mat-grid-list>
-
+  </mat-grid-list>  
 </div>
